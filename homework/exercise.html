@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+    <style>
+   
+    @keyframes flicker {
+        0%  { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+    }
+    .flicker-text {
+        font-size: 3rem;
+        color: #ff00ff;
+        text-align: center;
+        animation: flicker 1s infinite;
+    }
+
+    @keyframes bounce {
+        0% { transform: translateY(0); }
+        50% { transform: translateY(200px) scaleY(0.6); }
+        100% { transform: translateY(0); }
+    }
+    .ball {
+        width: 50px;
+        height: 50px;
+        background-color: red;
+        border-radius: 50%;
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        animation: bounce 1s infinite ease-in-out;
+    }
+    
+@keyframes marquee {
+        from { transform: translateX(-100%); }
+        to { transform: translateX(100%); }
+    }
+    .marquee-text {
+        font-size: 2rem;
+        color: blue;
+         position: absolute;
+        top: 250px;
+        width: 100%;
+        animation: marquee 5s linear infinite;
+    }
+</style>
+</head>
+<body>
+    <h1 class="flicker-text">Миготливий текст</h1>
+    <div class="ball"></div>
+    <div class="marquee-text">Hello, world!</div>
+</body>
+</html>
